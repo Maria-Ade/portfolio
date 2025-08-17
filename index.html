@@ -7,17 +7,17 @@
   <style>
     /* General Body Style */
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Times New Roman', Times, serif;
       line-height: 1.6;
       margin: 0;
-      background-color: #f7f9fc; /* Light soft blue background */
+      background-color: #f0f4f8; /* light gray-blue */
       color: #333;
       scroll-behavior: smooth;
     }
 
     /* Navigation Bar */
     nav {
-      background-color: #2a9d8f; /* Teal */
+      background-color: #1e3a8a; /* dark blue */
       padding: 15px;
       text-align: center;
       position: sticky;
@@ -40,26 +40,63 @@
 
     /* Headings */
     h1 {
-      color: #264653; /* Dark blue */
-      text-align: center;
-      margin-top: 40px;
+      color: #1e3a8a; /* dark blue */
+      margin: 0;
     }
 
     h2 {
-      color: #e76f51; /* Coral */
-      border-bottom: 3px solid #e76f51;
+      color: #2563eb; /* medium blue */
+      border-bottom: 3px solid #2563eb;
       padding-bottom: 5px;
       margin-top: 40px;
     }
 
     h3 {
-      color: #264653;
+      color: #1e3a8a;
       margin-top: 15px;
+    }
+
+    /* Home Section Flex Layout */
+    .home-container {
+      display: flex;
+      flex-wrap: wrap; /* responsive for small screens */
+      align-items: center;
+      justify-content: center;
+      margin: 40px 20px;
+      gap: 30px;
+    }
+
+    .home-image {
+      flex: 1 1 200px;
+      text-align: center;
+    }
+
+    .home-text {
+      flex: 2 1 300px;
+    }
+
+    /* Profile Picture */
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 3px solid #1e3a8a;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 768px) {
+      .home-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .home-text {
+        flex: unset;
+      }
     }
 
     /* Project Boxes */
     .project {
-      background-color: #e9f5f2; /* Soft teal */
+      background-color: #ffffff; /* white */
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
@@ -73,7 +110,7 @@
     }
 
     /* Project Images */
-    img {
+    .project-img {
       border-radius: 8px;
       margin: 10px 0;
       max-width: 100%;
@@ -81,15 +118,15 @@
       transition: transform 0.2s, box-shadow 0.2s;
     }
 
-    img:hover {
+    .project-img:hover {
       transform: scale(1.05);
       box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
     }
 
     /* Project Button */
-    .project a.button {
+    .button {
       display: inline-block;
-      background-color: #f4a261; /* Orange button */
+      background-color: #1e3a8a; /* dark blue */
       color: white;
       padding: 10px 18px;
       border-radius: 6px;
@@ -99,13 +136,13 @@
       transition: background-color 0.2s;
     }
 
-    .project a.button:hover {
-      background-color: #e76f51; /* Coral hover */
+    .button:hover {
+      background-color: #2563eb; /* medium blue hover */
     }
 
     /* About / Contact Box */
     .about-contact {
-      background-color: #fff3e0; /* Light pastel orange */
+      background-color: #e5e7eb; /* light gray */
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
@@ -125,7 +162,7 @@
 
     /* Links inside About Me */
     .about-contact a {
-      color: #2a9d8f;
+      color: #1e3a8a;
       text-decoration: none;
       font-weight: bold;
     }
@@ -133,7 +170,6 @@
     .about-contact a:hover {
       text-decoration: underline;
     }
-
   </style>
 </head>
 <body>
@@ -147,8 +183,18 @@
 
   <!-- Home / Introduction -->
   <section id="home">
-    <h1>Welcome to My Portfolio</h1>
-    <p>Hello! I’m Maria Adesanya, a Junior Data Analyst skilled in Python, SQL, Power BI, and Excel. Explore my projects and get to know me below.</p>
+    <div class="home-container">
+      <!-- Profile Picture -->
+      <div class="home-image">
+        <img src="images/image.jpg" alt="Maria Adesanya" class="profile-pic">
+      </div>
+
+      <!-- Intro Text -->
+      <div class="home-text">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hello! I’m Maria Adesanya, a Junior Data Analyst skilled in Python, SQL, Power BI, and Excel. Explore my projects and get to know me below.</p>
+      </div>
+    </div>
   </section>
 
   <!-- Projects Section -->
@@ -157,65 +203,59 @@
 
     <div class="project">
       <h3>Project 1: [Project Name]</h3>
-      <img src="images/project1.png" alt="Project 1 Screenshot">
+      <img src="images/project1.png" alt="Project 1 Screenshot" class="project-img">
       <p>[Short description of Project 1]</p>
-      <a href="[Project Link]" class="button">View Project</a>
+      <a href="#" class="button">View Project</a>
     </div>
 
     <div class="project">
       <h3>Project 2: [Project Name]</h3>
-      <img src="images/project2.png" alt="Project 2 Screenshot">
+      <img src="images/project2.png" alt="Project 2 Screenshot" class="project-img">
       <p>[Short description of Project 2]</p>
-      <a href="[Project Link]" class="button">View Project</a>
+      <a href="#" class="button">View Project</a>
     </div>
 
     <div class="project">
-      <h3>Project 3: [Project Name]</h3>
-      <img src="images/project3.png" alt="Project 3 Screenshot">
-      <p>[Short description of Project 3]</p>
-      <a href="[Project Link]" class="button">View Project</a>
+      <h3>Project 3: Power BI Dashboard</h3>
+      <img src="images/project3.png" alt="Project 3 Screenshot" class="project-img">
+      <p>Created an interactive dashboard in Power BI to track yearly product trends and sales performance.</p>
+      <a href="#" class="button">View Project</a>
     </div>
 
     <div class="project">
-      <h3>Project 4: [Project Name]</h3>
-      <img src="images/project4.png" alt="Project 4 Screenshot">
-      <p>[Short description of Project 4]</p>
-      <a href="[Project Link]" class="button">View Project</a>
+      <h3>Project 4: Expense Tracker Application</h3>
+      <img src="images/project4.png" alt="Project 4 Screenshot" class="project-img">
+      <p>Developed a GUI-based expense tracker in Python to manage monthly expenses efficiently.</p>
+      <a href="#" class="button">View Project</a>
     </div>
 
     <div class="project">
-      <h3>Project 5: [Project Name]</h3>
-      <img src="images/project5.png" alt="Project 5 Screenshot">
-      <p>[Short description of Project 5]</p>
-      <a href="[Project Link]" class="button">View Project</a>
+      <h3>Project 5: TODO List GUI App</h3>
+      <img src="images/project5.png" alt="Project 5 Screenshot" class="project-img">
+      <p>Built a user-friendly TODO list application with appointment reminders using Python Tkinter.</p>
+      <a href="#" class="button">View Project</a>
     </div>
 
-    <div class="project">
-      <h3>Project 6: [Project Name]</h3>
-      <img src="images/project6.png" alt="Project 6 Screenshot">
-      <p>[Short description of Project 6]</p>
-      <a href="[Project Link]" class="button">View Project</a>
-    </div>
   </section>
 
-  <!-- About Me / Contact Section -->
+  <!-- About Me Section -->
   <section id="about">
+    <h2>About Me</h2>
     <div class="about-contact">
-      <h2>About Me</h2>
-      <p>I’m Maria Adesanya, a Junior Data Analyst passionate about turning data into actionable insights.</p>
-
-      <h3>Skills</h3>
+      <p>Hi, I’m Maria Adesanya! I’m passionate about turning data into actionable insights. I enjoy working with Python, SQL, Power BI, and Excel. I love designing dashboards, automating tasks, and helping teams make data-driven decisions.</p>
+      
+      <h3>Skills:</h3>
       <ul>
-        <li>Python – Data Analysis & Visualization</li>
-        <li>SQL – Database Querying</li>
-        <li>Power BI – Dashboards & Reports</li>
-        <li>Excel – Data Cleaning & Analysis</li>
+        <li>Python Programming</li>
+        <li>SQL & Database Management</li>
+        <li>Power BI & Data Visualization</li>
+        <li>Excel Analysis & Automation</li>
       </ul>
 
-      <h3>Contact</h3>
-      <p>Email: m_adesanya@outlook.com</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/maria-ade-profile</a></p>
-      <p>GitHub: <a href="https://github.com/yourusername">Your GitHub Profile</a></p>
+      <h3>Contact:</h3>
+      <p>Email: <a href="mailto:m_adesanya@outlook.com">m_adesanya@outlook.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/maria-ade-profile" target="_blank">https://www.linkedin.com/in/maria-ade-profile</a></p>
+      <p>GitHub: <a href="https://maria-ade.github.io/portfolio/" target="_blank">https://maria-ade.github.io/portfolio/</a></p>
     </div>
   </section>
 
