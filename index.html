@@ -203,18 +203,64 @@
 
     <div class="project">
   <h3>Project 1: Q1 2025 Sales Analysis</h3>
-  <img src="images/sales_dashboard.png" alt="Q1 2025 Sales Dashboard">
+  <img src="project/powerbi/sales_dashboard.png" alt="Q1 2025 Sales Dashboard">
   <p>This Power BI dashboard analyzes sales data for Q1 2025, showing total revenue, top product categories, best-selling stores and products, and revenue trends over the three months.</p>
-  <a href="https://app.powerbi.com/groups/me/dashboards/d45e2ffb-a7b8-40a9-b055-4514b415c9da?experience=power-bi&clientSideAuth=0" class="button" target="_blank">View Dashboard</a>
+   <a href="https://app.powerbi.com/groups/me/dashboards/d45e2ffb-a7b8-40a9-b055-4514b415c9da?experience=power-bi&clientSideAuth=0" class="button" target="_blank">View Dashboard</a>
 </div>
 
 
-    <div class="project">
-      <h3>Project 2: [Project Name]</h3>
-      <img src="images/project2.png" alt="Project 2 Screenshot" class="project-img">
-      <p>[Short description of Project 2]</p>
-      <a href="#" class="button">View Project</a>
-    </div>
+<div class="project" id="project2">
+  <h3>Project 2: Healthcare Data Analysis – Key Insights</h3>
+  
+  <!-- Images -->
+  <img src="project/excel/health.png" alt="Healthcare Data Analysis Dashboard" class="project-img">
+  <img src="project/excel/health2.png" alt="Healthcare Data Analysis Chart" class="project-img">
+
+  <!-- Short description -->
+  <p>
+    Analyzed patient demographics, hospital admissions, medical costs, 
+    and test results to uncover trends in healthcare usage. Findings show 
+    consistent patient age across conditions, higher costs for elective admissions, 
+    varied billing by insurance providers, and evenly distributed clinical outcomes.
+  </p>
+
+  <!-- Hidden long description -->
+  <div class="more-desc" style="display: none;">
+    <p>
+      This project explores a healthcare dataset in depth, covering demographics, billing 
+      patterns, admission types, insurance providers, and clinical outcomes. 
+      Key findings include:<br><br>
+      • Average patient age is ~51–52 years across conditions.<br>
+      • Elective admissions generate the highest billing totals.<br>
+      • Insurance billing varies significantly (Cigna highest, Aetna lowest).<br>
+      • Length of stay averages 15–16 days, with asthma patients staying slightly longer.<br>
+      • Test results are evenly split across abnormal, normal, and inconclusive, with older 
+        patients showing more abnormalities.<br><br>
+          </p>
+  </div>
+
+  <!-- Two buttons side by side -->
+  <button onclick="toggleDesc('project2')" class="button">View More</button>
+  <a href="https://1drv.ms/x/c/b4160a688b97fdad/EaxB18d7k0BBjMNEQXLRXyUBopaUgIilF5EMhV8SlLHlQw?e=Tn8NRz" class="button" target="_blank">View Project</a>
+</div>
+
+<script>
+function toggleDesc(projectId) {
+  const project = document.getElementById(projectId);
+  const desc = project.querySelector(".more-desc");
+  const btn = project.querySelector("button");
+
+  if (desc.style.display === "none") {
+    desc.style.display = "block";
+    btn.textContent = "View Less";
+  } else {
+    desc.style.display = "none";
+    btn.textContent = "View More";
+  }
+}
+</script>
+
+
 
     <div class="project">
       <h3>Project 3: Power BI Dashboard</h3>
@@ -245,13 +291,23 @@
     <div class="about-contact">
       <p>Hi, I’m Maria Adesanya! I’m passionate about turning data into actionable insights. I enjoy working with Python, SQL, Power BI, and Excel. I love designing dashboards, automating tasks, and helping teams make data-driven decisions.</p>
       
-      <h3>Skills:</h3>
-      <ul>
-        <li>Python Programming</li>
-        <li>SQL & Database Management</li>
-        <li>Power BI & Data Visualization</li>
-        <li>Excel Analysis & Automation</li>
-      </ul>
+      <h3>Technical Skills:</h3>
+<ul>
+  <li>Python Programming – Data analysis, automation, and visualization (Pandas, NumPy, Matplotlib, Seaborn, Tkinter for GUIs, OOP principles).</li>
+  <li>SQL & Database Management – Query writing, database design, and management (Oracle APEX, ERD, data dictionaries).</li>
+  <li>Power BI & Data Visualization – Interactive dashboards and reports for business and healthcare insights.</li>
+  <li>Excel Analysis & Automation – Advanced formulas, pivot tables, VBA macros, and dashboard creation.</li>
+  <li>Data Analysis – Cleaning, preparing, and analyzing datasets; statistical analysis; automated reporting.</li>
+</ul>
+
+<h3>Professional Skills:</h3>
+<ul>
+  <li>Administrative & Financial Support – Scheduling, meeting coordination, preparing financial reports, supporting accounting operations.</li>
+  <li>Technical Proficiency – Microsoft Office Suite (Excel, Word, Outlook) for documentation and communication.</li>
+  <li>Communication – Client correspondence, internal communication, and enquiry resolution with professionalism.</li>
+  <li>Organizational & Time Management – Multitasking, prioritizing workloads, and meeting deadlines in fast-paced settings.</li>
+</ul>
+
 
       <h3>Contact:</h3>
       <p>Email: <a href="mailto:m_adesanya@outlook.com">m_adesanya@outlook.com</a></p>
