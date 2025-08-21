@@ -58,22 +58,36 @@
 
     /* Home Section Flex Layout */
     .home-container {
-      display: flex;
-      flex-wrap: wrap; /* responsive for small screens */
-      align-items: center;
-      justify-content: center;
-      margin: 40px 20px;
-      gap: 30px;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start; /* text stays closer to image */
+  margin: 40px auto;
+  gap: 40px; /* reduce/increase to control space */
+  max-width: 1000px; /* keeps section balanced */
+}
 
-    .home-image {
-      flex: 1 1 200px;
-      text-align: center;
-    }
+.home-image {
+  flex: 0 0 200px; /* keeps profile image fixed width */
+  text-align: center;
+}
 
-    .home-text {
-      flex: 2 1 300px;
-    }
+.home-text {
+  flex: 1;
+  text-align: left; /* aligns better beside the picture */
+}
+
+.home-text h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.home-text p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #444;
+}
 
     /* Profile Picture */
     .profile-pic {
@@ -92,6 +106,19 @@
       .home-text {
         flex: unset;
       }
+    }
+
+    /* Welcome Section Styling */
+    .home-text h1 {
+      font-size: 2.5em;   /* Bigger heading */
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .home-text p {
+      font-size: 1.3em;   /* Bigger intro text */
+      line-height: 1.6;
+      color: #444;
     }
 
     /* Project Boxes */
@@ -174,6 +201,7 @@
 </head>
 <body>
 
+
   <!-- Navigation Menu -->
   <nav>
     <a href="#home">Home</a>
@@ -192,7 +220,13 @@
       <!-- Intro Text -->
       <div class="home-text">
         <h1>Welcome to My Portfolio</h1>
-        <p>Hello! I’m Maria Adesanya, a Junior Data Analyst skilled in Python, SQL, Power BI, and Excel. Explore my projects and get to know me below.</p>
+        <p><p>
+Hello! I’m <strong>Maria Adesanya</strong>, a Junior Data Analyst skilled in <strong>Python, SQL, Power BI, and Excel</strong>.  
+I enjoy solving problems through data cleaning, analysis, and visualization — from creating interactive dashboards to automating reports.  
+My projects showcase work in <strong>sales performance, healthcare insights, and process efficiency</strong>.  
+Scroll down to explore my portfolio and see how I transform data into decisions.
+</p>
+.</p>
       </div>
     </div>
   </section>
