@@ -140,7 +140,7 @@
     .project-img {
       border-radius: 8px;
       margin: 10px 0;
-      max-width: 100%;
+      max-width: 90%;
       height: auto;
       transition: transform 0.2s, box-shadow 0.2s;
     }
@@ -299,12 +299,73 @@ function toggleDesc(projectId) {
 
 
 
-    <div class="project">
-      <h3>Project 3: Power BI Dashboard</h3>
-      <img src="images/project3.png" alt="Project 3 Screenshot" class="project-img">
-      <p>Created an interactive dashboard in Power BI to track yearly product trends and sales performance.</p>
-      <a href="#" class="button">View Project</a>
-    </div>
+  <div class="project" id="project-olympic">
+  <h3>Project: Olympic Medal Analytics — Key Insights</h3>
+
+  <!-- Screenshot(s) -->
+  <img src="project/olympic/olympic.jpg"
+       alt="Power BI Olympic dashboard showing medals by country, yearly trends, seasons, and athletes"
+       class="project-img">
+
+  <!-- Short description -->
+  <p>
+    Built an interactive Power BI report to explore medals by <strong>country</strong>, <strong>year</strong>,
+    <strong>season</strong>, and <strong>athlete</strong>. Highlights include a gold-medal share view, per-capita
+    medal efficiency, and country profiles with population &amp; GDP per capita context. SQL was used for robust
+    aggregations (years with &gt;10/&gt;50 medals) and to prepare a clean DirectQuery model.
+  </p>
+
+  <!-- Hidden long description -->
+  <div class="more-desc" style="display: none;">
+    <p><strong>What I built</strong></p>
+    <ul>
+      <li><em>Medals by Year</em> (line): trends over time with Medal slicer (Gold/Silver/Bronze) and Season filter.</li>
+      <li><em>Country × Medal</em> (stacked bars): composition of medal types by country (Gold, Silver, Bronze).</li>
+      <li><em>Season comparison</em>: 100% stacked bars for Summer vs Winter medal mix.</li>
+      <li><em>Gold share</em> (donut): top countries’ share of all Gold medals (Top-N + “Others”).</li>
+      <li><em>Per-capita standouts</em> (bar): medals per million people, with a minimum-medal threshold to avoid noise.</li>
+      <li><em>Context</em>: Population (de-duplicated per country) and a GDP-per-capita map for economic backdrop.</li>
+      <li><em>Athlete view</em>: top medal-winning athletes with cross-filtering to country and year.</li>
+    </ul>
+
+    <p><strong>Data &amp; modeling notes</strong></p>
+    <ul>
+      <li>DirectQuery to SQL Server; cleaned blanks/“NULL” countries; normalized fields for grouping.</li>
+      <li>DAX measures to avoid over-counting (e.g., population per country; medals per million; Gold share).</li>
+      <li>Top-N, dynamic titles, and synchronized slicers for a guided, interactive narrative.</li>
+    </ul>
+
+    <p><strong>SQL code (download/view)</strong></p>
+    <ul>
+      <li><a href="olympic_query/olympic_merged_data.sql" download>olympic_merged_data.sql</a></li>
+      <li><a href="olympic_query/NumYearsMoreThan10Medals(olympic).sql" download>NumYearsMoreThan10Medals(olympic).sql</a></li>
+      <li><a href="olympic_query/Top%2015%20Per-Capita%20Medal%20Standouts.sql" download>Top 15 Per-Capita Medal Standouts.sql</a></li>
+      <li><a href="olympic_query/YearsMoreThan50Medals(OLYMPIC).sql" download>YearsMoreThan50Medals(OLYMPIC).sql</a></li>
+    </ul>
+  </div>
+
+  <!-- Buttons -->
+  <button onclick="toggleDesc('project-olympic')" class="button">View More</button>
+  <a href="project/olympic/olympic.jpg" class="button" target="_blank" rel="noopener">View Screenshot</a>
+</div>
+
+<!-- If you don't already have this on the page, include it once -->
+<script>
+function toggleDesc(projectId) {
+  const project = document.getElementById(projectId);
+  const desc = project.querySelector(".more-desc");
+  const btn = project.querySelector("button");
+
+  if (desc.style.display === "none") {
+    desc.style.display = "block";
+    btn.textContent = "View Less";
+  } else {
+    desc.style.display = "none";
+    btn.textContent = "View More";
+  }
+}
+</script>
+
 
     <div class="project">
       <h3>Project 4: Expense Tracker Application</h3>
