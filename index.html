@@ -10,14 +10,14 @@
       font-family: 'Times New Roman', Times, serif;
       line-height: 1.6;
       margin: 0;
-      background-color: #f0f4f8; /* light gray-blue */
+      background-color: #f0f4f8;
       color: #333;
       scroll-behavior: smooth;
     }
 
     /* Navigation Bar */
     nav {
-      background-color: #1e3a8a; /* dark blue */
+      background-color: #1e3a8a;
       padding: 15px;
       text-align: center;
       position: sticky;
@@ -40,12 +40,12 @@
 
     /* Headings */
     h1 {
-      color: #1e3a8a; /* dark blue */
+      color: #1e3a8a;
       margin: 0;
     }
 
     h2 {
-      color: #2563eb; /* medium blue */
+      color: #2563eb;
       border-bottom: 3px solid #2563eb;
       padding-bottom: 5px;
       margin-top: 40px;
@@ -58,36 +58,36 @@
 
     /* Home Section Flex Layout */
     .home-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start; /* text stays closer to image */
-  margin: 40px auto;
-  gap: 40px; /* reduce/increase to control space */
-  max-width: 1000px; /* keeps section balanced */
-}
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 40px auto;
+      gap: 40px;
+      max-width: 1000px;
+    }
 
-.home-image {
-  flex: 0 0 200px; /* keeps profile image fixed width */
-  text-align: center;
-}
+    .home-image {
+      flex: 0 0 200px;
+      text-align: center;
+    }
 
-.home-text {
-  flex: 1;
-  text-align: left; /* aligns better beside the picture */
-}
+    .home-text {
+      flex: 1;
+      text-align: left;
+    }
 
-.home-text h1 {
-  font-size: 2.5em;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
+    .home-text h1 {
+      font-size: 2.5em;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
 
-.home-text p {
-  font-size: 1.2em;
-  line-height: 1.6;
-  color: #444;
-}
+    .home-text p {
+      font-size: 1.3em;
+      line-height: 1.6;
+      color: #444;
+    }
 
     /* Profile Picture */
     .profile-pic {
@@ -108,22 +108,9 @@
       }
     }
 
-    /* Welcome Section Styling */
-    .home-text h1 {
-      font-size: 2.5em;   /* Bigger heading */
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
-
-    .home-text p {
-      font-size: 1.3em;   /* Bigger intro text */
-      line-height: 1.6;
-      color: #444;
-    }
-
     /* Project Boxes */
     .project {
-      background-color: #ffffff; /* white */
+      background-color: #ffffff;
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
@@ -153,7 +140,7 @@
     /* Project Button */
     .button {
       display: inline-block;
-      background-color: #1e3a8a; /* dark blue */
+      background-color: #1e3a8a;
       color: white;
       padding: 10px 18px;
       border-radius: 6px;
@@ -164,30 +151,27 @@
     }
 
     .button:hover {
-      background-color: #2563eb; /* medium blue hover */
+      background-color: #2563eb;
     }
 
     /* About / Contact Box */
     .about-contact {
-      background-color: #e5e7eb; /* light gray */
+      background-color: #e5e7eb;
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
       margin-top: 20px;
     }
 
-    /* Lists */
     ul {
       list-style-type: square;
       margin-left: 20px;
     }
 
-    /* Paragraphs */
     p {
       margin-bottom: 15px;
     }
 
-    /* Links inside About Me */
     .about-contact a {
       color: #1e3a8a;
       text-decoration: none;
@@ -201,7 +185,6 @@
 </head>
 <body>
 
-
   <!-- Navigation Menu -->
   <nav>
     <a href="#home">Home</a>
@@ -212,21 +195,17 @@
   <!-- Home / Introduction -->
   <section id="home">
     <div class="home-container">
-      <!-- Profile Picture -->
       <div class="home-image">
         <img src="images/image.png" alt="Maria Adesanya" class="profile-pic">
       </div>
-
-      <!-- Intro Text -->
       <div class="home-text">
         <h1>Welcome to My Portfolio</h1>
-        <p><p>
-Hello! I’m <strong>Maria Adesanya</strong>, a Junior Data Analyst skilled in <strong>Python, SQL, Power BI, and Excel</strong>.  
-I enjoy solving problems through data cleaning, analysis, and visualization — from creating interactive dashboards to automating reports.  
-My projects showcase work in <strong>sales performance, healthcare insights, and process efficiency</strong>.  
-Scroll down to explore my portfolio and see how I transform data into decisions.
-</p>
-.</p>
+        <p>
+          Hello! I’m <strong>Maria Adesanya</strong>, a Junior Data Analyst skilled in <strong>Python, SQL, Power BI, and Excel</strong>.<br>
+          I enjoy solving problems through data cleaning, analysis, and visualization — from creating interactive dashboards to automating reports.<br>
+          My projects showcase work in <strong>sales performance, healthcare insights, and process efficiency</strong>.<br>
+          Scroll down to explore my portfolio and see how I transform data into decisions.
+        </p>
       </div>
     </div>
   </section>
@@ -235,150 +214,84 @@ Scroll down to explore my portfolio and see how I transform data into decisions.
   <section id="projects">
     <h2>My Projects</h2>
 
+    <!-- Project 1 -->
     <div class="project">
-  <h3>Project 1: Q1 2025 Sales Analysis</h3>
-  <img src="project/powerbi/sales_dashboard.png" alt="Q1 2025 Sales Dashboard">
-  <p>This Power BI dashboard analyzes sales data for Q1 2025, showing total revenue, top product categories, best-selling stores and products, and revenue trends over the three months.</p>
-   <a href="https://app.powerbi.com/groups/me/dashboards/d45e2ffb-a7b8-40a9-b055-4514b415c9da?experience=power-bi&clientSideAuth=0" class="button" target="_blank">View Dashboard</a>
-</div>
-
-
-<div class="project" id="project2">
-  <h3>Project 2: Healthcare Data Analysis – Key Insights</h3>
-  
-  <!-- Images -->
-  <img src="project/excel/health.png" alt="Healthcare Data Analysis Dashboard" class="project-img">
-  <img src="project/excel/health2.png" alt="Healthcare Data Analysis Chart" class="project-img">
-
-  <!-- Short description -->
-  <p>
-    Analyzed patient demographics, hospital admissions, medical costs, 
-    and test results to uncover trends in healthcare usage. Findings show 
-    consistent patient age across conditions, higher costs for elective admissions, 
-    varied billing by insurance providers, and evenly distributed clinical outcomes.
-  </p>
-
-  <!-- Hidden long description -->
-  <div class="more-desc" style="display: none;">
-    <p>
-      This project explores a healthcare dataset in depth, covering demographics, billing 
-      patterns, admission types, insurance providers, and clinical outcomes. 
-      Key findings include:<br><br>
-      • Average patient age is ~51–52 years across conditions.<br>
-      • Elective admissions generate the highest billing totals.<br>
-      • Insurance billing varies significantly (Cigna highest, Aetna lowest).<br>
-      • Length of stay averages 15–16 days, with asthma patients staying slightly longer.<br>
-      • Test results are evenly split across abnormal, normal, and inconclusive, with older 
-        patients showing more abnormalities.<br><br>
-          </p>
-  </div>
-
-  <!-- Two buttons side by side -->
-  <button onclick="toggleDesc('project2')" class="button">View More</button>
-  <a href="excel_workbook/healthcare_analysis.xlsx" 
-   class="button" target="_blank">
-   View Project
-</a>
-
-
-<script>
-function toggleDesc(projectId) {
-  const project = document.getElementById(projectId);
-  const desc = project.querySelector(".more-desc");
-  const btn = project.querySelector("button");
-
-  if (desc.style.display === "none") {
-    desc.style.display = "block";
-    btn.textContent = "View Less";
-  } else {
-    desc.style.display = "none";
-    btn.textContent = "View More";
-  }
-}
-</script>
-
-
-
-  <div class="project" id="project-olympic">
-  <h3>Project: Olympic Medal Analytics — Key Insights [1896-2014] </h3>
-
-  <!-- Screenshot(s) -->
-  <img src="project/olympic/olympic.jpg"
-       alt="Power BI Olympic dashboard showing medals by country, yearly trends, seasons, and athletes"
-       class="project-img">
-
-  <!-- Short description -->
-  <p>
-    Built an interactive Power BI report to explore medals by <strong>country</strong>, <strong>year</strong>,
-    <strong>season</strong>, and <strong>athlete</strong>. Highlights include a gold-medal share view, per-capita
-    medal efficiency, and country profiles with population &amp; GDP per capita context. SQL was used for robust
-    aggregations (years with &gt;10/&gt;50 medals) and to prepare a clean DirectQuery model.
-  </p>
-
-  <!-- Hidden long description -->
-  <div class="more-desc" style="display: none;">
-    <p><strong>What I built</strong></p>
-    <ul>
-      <li><em>Medals by Year</em> (line): trends over time with Medal slicer (Gold/Silver/Bronze) and Season filter.</li>
-      <li><em>Country × Medal</em> (stacked bars): composition of medal types by country (Gold, Silver, Bronze).</li>
-      <li><em>Season comparison</em>: 100% stacked bars for Summer vs Winter medal mix.</li>
-      <li><em>Gold share</em> (donut): top countries’ share of all Gold medals (Top-N + “Others”).</li>
-      <li><em>Per-capita standouts</em> (bar): medals per million people, with a minimum-medal threshold to avoid noise.</li>
-      <li><em>Context</em>: Population (de-duplicated per country) and a GDP-per-capita map for economic backdrop.</li>
-      <li><em>Athlete view</em>: top medal-winning athletes with cross-filtering to country and year.</li>
-    </ul>
-
-    <p><strong>Data &amp; modeling notes</strong></p>
-    <ul>
-      <li>DirectQuery to SQL Server; cleaned blanks/“NULL” countries; normalized fields for grouping.</li>
-      <li>DAX measures to avoid over-counting (e.g., population per country; medals per million; Gold share).</li>
-      <li>Top-N, dynamic titles, and synchronized slicers for a guided, interactive narrative.</li>
-    </ul>
-
-    <p><strong>SQL code (download/view)</strong></p>
-    <ul>
-      <li><a href="olympic_query/olympic_merged_data.sql" download>olympic_merged_data.sql</a></li>
-      <li><a href="olympic_query/NumYearsMoreThan10Medals(olympic).sql" download>NumYearsMoreThan10Medals(olympic).sql</a></li>
-      <li><a href="olympic_query/Top%2015%20Per-Capita%20Medal%20Standouts.sql" download>Top 15 Per-Capita Medal Standouts.sql</a></li>
-      <li><a href="olympic_query/YearsMoreThan50Medals(OLYMPIC).sql" download>YearsMoreThan50Medals(OLYMPIC).sql</a></li>
-    </ul>
-  </div>
-
-  <!-- Buttons -->
-  <button onclick="toggleDesc('project-olympic')" class="button">View More</button>
-  <a href="project/olympic/olympic.jpg" class="button" target="_blank" rel="noopener">View Screenshot</a>
-</div>
-
-<!-- If you don't already have this on the page, include it once -->
-<script>
-function toggleDesc(projectId) {
-  const project = document.getElementById(projectId);
-  const desc = project.querySelector(".more-desc");
-  const btn = project.querySelector("button");
-
-  if (desc.style.display === "none") {
-    desc.style.display = "block";
-    btn.textContent = "View Less";
-  } else {
-    desc.style.display = "none";
-    btn.textContent = "View More";
-  }
-}
-</script>
-
-
-    <div class="project">
-      <h3>Project 4: Expense Tracker Application</h3>
-      <img src="images/project4.png" alt="Project 4 Screenshot" class="project-img">
-      <p>Developed a GUI-based expense tracker in Python to manage monthly expenses efficiently.</p>
-      <a href="#" class="button">View Project</a>
+      <h3>Project 1: Q1 2025 Sales Analysis</h3>
+      <img src="project/powerbi/sales_dashboard.png" alt="Q1 2025 Sales Dashboard" class="project-img">
+      <p>This Power BI dashboard analyzes sales data for Q1 2025, showing total revenue, top product categories, best-selling stores and products, and revenue trends over the three months.</p>
+      <a href="https://app.powerbi.com/groups/me/dashboards/d45e2ffb-a7b8-40a9-b055-4514b415c9da?experience=power-bi&clientSideAuth=0" class="button" target="_blank">View Dashboard</a>
     </div>
 
-    <div class="project">
-      <h3>Project 5: TODO List GUI App</h3>
-      <img src="images/project5.png" alt="Project 5 Screenshot" class="project-img">
-      <p>Built a user-friendly TODO list application with appointment reminders using Python Tkinter.</p>
-      <a href="#" class="button">View Project</a>
+    <!-- Project 2 -->
+    <div class="project" id="project2">
+      <h3>Project 2: Healthcare Data Analysis – Key Insights</h3>
+      <img src="project/excel/health.png" alt="Healthcare Data Analysis Dashboard" class="project-img">
+      <img src="project/excel/health2.png" alt="Healthcare Data Analysis Chart" class="project-img">
+      <p>Analyzed patient demographics, hospital admissions, medical costs, and test results to uncover trends in healthcare usage. Findings show consistent patient age across conditions, higher costs for elective admissions, varied billing by insurance providers, and evenly distributed clinical outcomes.</p>
+      <div class="more-desc" style="display: none;">
+        <p>
+          Key findings include:<br><br>
+          • Average patient age is ~51–52 years across conditions.<br>
+          • Elective admissions generate the highest billing totals.<br>
+          • Insurance billing varies significantly (Cigna highest, Aetna lowest).<br>
+          • Length of stay averages 15–16 days, with asthma patients staying slightly longer.<br>
+          • Test results are evenly split across abnormal, normal, and inconclusive.<br>
+        </p>
+      </div>
+      <button onclick="toggleDesc('project2')" class="button">View More</button>
+      <a href="excel_workbook/healthcare_analysis.xlsx" class="button" target="_blank">View Project</a>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project" id="project-olympic">
+      <h3>Project 3: Olympic Medal Analytics — Key Insights [1896-2014]</h3>
+      <img src="project/olympic/olympic.jpg" alt="Power BI Olympic dashboard showing medals by country, yearly trends, seasons, and athletes" class="project-img">
+      <p>Built an interactive Power BI report to explore medals by <strong>country</strong>, <strong>year</strong>, <strong>season</strong>, and <strong>athlete</strong>. Highlights include a gold-medal share view, per-capita medal efficiency, and country profiles with population & GDP per capita context.</p>
+      <div class="more-desc" style="display: none;">
+        <p><strong>What I built</strong></p>
+        <ul>
+          <li>Medals by Year trends with Medal slicer and Season filter.</li>
+          <li>Country × Medal composition (Gold, Silver, Bronze).</li>
+          <li>Summer vs Winter medal mix comparison.</li>
+          <li>Top-N gold medal share view with "Others".</li>
+          <li>Medals per million population (per-capita standouts).</li>
+          <li>Context with GDP-per-capita map and population stats.</li>
+        </ul>
+        <p><strong>SQL code (download/view)</strong></p>
+        <ul>
+          <li><a href="olympic_query/olympic_merged_data.sql" download>olympic_merged_data.sql</a></li>
+          <li><a href="olympic_query/NumYearsMoreThan10Medals(olympic).sql" download>NumYearsMoreThan10Medals.sql</a></li>
+          <li><a href="olympic_query/Top%2015%20Per-Capita%20Medal%20Standouts.sql" download>Top 15 Per-Capita Medal Standouts.sql</a></li>
+          <li><a href="olympic_query/YearsMoreThan50Medals(OLYMPIC).sql" download>YearsMoreThan50Medals.sql</a></li>
+        </ul>
+      </div>
+      <button onclick="toggleDesc('project-olympic')" class="button">View More</button>
+      <a href="project/olympic/olympic.jpg" class="button" target="_blank" rel="noopener">View Screenshot</a>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="project" id="project-amazon">
+      <h3>Project 4: Amazon Sentiment Analysis</h3>
+      <p>This project analyzes customer sentiment from Amazon product reviews using Python. The pipeline includes data cleaning, tokenization, vectorization, and training a classification model. The model predicts whether a review is <strong>positive</strong>, <strong>neutral</strong>, or <strong>negative</strong>.</p>
+      <div class="more-desc" style="display: none;">
+        <h3>Key Results</h3>
+        <ul>
+          <li>Sentiment distribution compared between true and predicted values.</li>
+          <li>Confusion matrix showed strong performance for positive reviews.</li>
+          <li>Balanced accuracy achieved across sentiment classes.</li>
+        </ul>
+        <h3>Screenshots</h3>
+        <img src="project/python/Figure_1.png" alt="Sentiment distribution chart" class="project-img">
+        <img src="project/python/Figure_2.png" alt="Confusion matrix heatmap" class="project-img">
+        <img src="project/python/Figure_3.png" alt="Additional visualization" class="project-img">
+        <img src="project/python/Figure_4.png" alt="Additional visualization" class="project-img">
+        <h3>Code</h3>
+        <p>Full implementation available here: 
+          <a href="python_code/amazon2.py" target="_blank">Amazon Sentiment Analysis Code</a>
+        </p>
+      </div>
+      <button onclick="toggleDesc('project-amazon')" class="button">View More</button>
+      <a href="python_code/amazon2.py" class="button" target="_blank">View Code</a>
     </div>
 
   </section>
@@ -390,29 +303,45 @@ function toggleDesc(projectId) {
       <p>Hi, I’m Maria Adesanya! I’m passionate about turning data into actionable insights. I enjoy working with Python, SQL, Power BI, and Excel. I love designing dashboards, automating tasks, and helping teams make data-driven decisions.</p>
       
       <h3>Technical Skills:</h3>
-<ul>
-  <li>Python Programming – Data analysis, automation, and visualization (Pandas, NumPy, Matplotlib, Seaborn, Tkinter for GUIs, OOP principles).</li>
-  <li>SQL & Database Management – Query writing, database design, and management (Oracle APEX, ERD, data dictionaries).</li>
-  <li>Power BI & Data Visualization – Interactive dashboards and reports for business and healthcare insights.</li>
-  <li>Excel Analysis & Automation – Advanced formulas, pivot tables, VBA macros, and dashboard creation.</li>
-  <li>Data Analysis – Cleaning, preparing, and analyzing datasets; statistical analysis; automated reporting.</li>
-</ul>
+      <ul>
+        <li>Python Programming – Data analysis, automation, and visualization (Pandas, NumPy, Matplotlib, Seaborn, Tkinter for GUIs, OOP principles).</li>
+        <li>SQL & Database Management – Query writing, database design, and management (Oracle APEX, ERD, data dictionaries).</li>
+        <li>Power BI & Data Visualization – Interactive dashboards and reports for business and healthcare insights.</li>
+        <li>Excel Analysis & Automation – Advanced formulas, pivot tables, VBA macros, and dashboard creation.</li>
+        <li>Data Analysis – Cleaning, preparing, and analyzing datasets; statistical analysis; automated reporting.</li>
+      </ul>
 
-<h3>Professional Skills:</h3>
-<ul>
-  <li>Administrative & Financial Support – Scheduling, meeting coordination, preparing financial reports, supporting accounting operations.</li>
-  <li>Technical Proficiency – Microsoft Office Suite (Excel, Word, Outlook) for documentation and communication.</li>
-  <li>Communication – Client correspondence, internal communication, and enquiry resolution with professionalism.</li>
-  <li>Organizational & Time Management – Multitasking, prioritizing workloads, and meeting deadlines in fast-paced settings.</li>
-</ul>
-
+      <h3>Professional Skills:</h3>
+      <ul>
+        <li>Administrative & Financial Support – Scheduling, meeting coordination, preparing financial reports, supporting accounting operations.</li>
+        <li>Technical Proficiency – Microsoft Office Suite (Excel, Word, Outlook) for documentation and communication.</li>
+        <li>Communication – Client correspondence, internal communication, and enquiry resolution with professionalism.</li>
+        <li>Organizational & Time Management – Multitasking, prioritizing workloads, and meeting deadlines in fast-paced settings.</li>
+      </ul>
 
       <h3>Contact:</h3>
       <p>Email: <a href="mailto:m_adesanya@outlook.com">m_adesanya@outlook.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/maria-ade-profile" target="_blank">https://www.linkedin.com/in/maria-ade-profile</a></p>
-      <p>GitHub: <a href="https://maria-ade.github.io/portfolio/" target="_blank">https://maria-ade.github.io/portfolio/</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/maria-ade-profile" target="_blank">linkedin.com/in/maria-ade-profile</a></p>
+      <p>GitHub: <a href="https://github.com/Maria-Ade/portfolio" target="_blank" rel="noopener">github.com/Maria-Ade/portfolio</a></p>
     </div>
   </section>
+
+  <!-- Script for toggle -->
+  <script>
+    function toggleDesc(projectId) {
+      const project = document.getElementById(projectId);
+      const desc = project.querySelector(".more-desc");
+      const btn = project.querySelector("button");
+
+      if (desc.style.display === "none") {
+        desc.style.display = "block";
+        btn.textContent = "View Less";
+      } else {
+        desc.style.display = "none";
+        btn.textContent = "View More";
+      }
+    }
+  </script>
 
 </body>
 </html>
